@@ -13,6 +13,14 @@ def menu_dos():
     print("3.Encontar la cantidad de números positivos y negativos")
     print("4.Salir")
 
+def suma_total(lista):
+    suma1=sum(lista)
+    return suma1
+
+def area_triangulo(base,altura):
+    area=base*altura/2
+
+
 while True:
     menu()
     option=input("\nSeleccione una opción del menú: ")
