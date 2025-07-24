@@ -32,10 +32,18 @@ def promedio_calificaciones(lista):
     print("\n--PROMEDIO--")
     print(f"El promedio de las calificaciones ingresadas es:{g:.2f}")
 
+def mayor_menor(lista):
+    mayor=max(lista)
+    menor=min(lista)
+    print("\n--MAXIMO Y MINIMO--")
+    print(f"El maximo de los números ingresados es:{mayor}")
+    print(f"El menor de los números ingresados es:{menor}")
+
 
 while True:
     lista=[]
     lista_dos=[]
+    lista_tres=[]
     menu()
     option=input("\nSeleccione una opción del menú: ")
 
@@ -66,17 +74,26 @@ while True:
 
         case "4":
             q=int(input("\nIngrese la cantidad de calificaciones que quiere agregar: "))
-            for i in range(q):
-                p=int(input("Ingrese la calificación que desea agregar:"))
-                lista_dos.append(p)
+            if q>0:
+                for i in range(q):
+                    p=int(input("Ingrese la calificación que desea agregar:"))
+                    lista_dos.append(p)
 
-            promedio_calificaciones(lista_dos)
-
-
-
+                promedio_calificaciones(lista_dos)
+            else:
+                print("Error valor invalido.")
 
         case "5":
-            print()
+            q = int(input("\nIngrese la cantidad de números que desea comparar: "))
+            if q > 0:
+                for i in range(q):
+                    p=int(input("Ingrese los números que desea comparar:"))
+                    lista_tres.append(p)
+
+                mayor_menor(lista_tres)
+
+            else:
+                print("Error valor invalido.")
 
         case "6":
             print("Saliendo del programa")
