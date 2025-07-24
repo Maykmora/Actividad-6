@@ -19,6 +19,7 @@ def suma_total(lista):
 
 def area_triangulo(base,altura):
     area=base*altura/2
+    return area
 
 
 while True:
@@ -41,7 +42,9 @@ while True:
                         print()
 
         case "2":
-            print()
+            base=float(input("Ingrese la base del triangulo:"))
+            altura=float(input("Ingrese la altura del triangulo"))
+            print(f"El area del triangulo de {base} x {altura} es {area_triangulo(base,altura)}")
 
         case "3":
             print()
