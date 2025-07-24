@@ -7,15 +7,27 @@ def menu():
     print("5.Calcular el numero mayor y el menor de n números ")
     print("6.Salir del programa")
 
-def menu_dos():
-    print("1.Encontrar la suma total de n numeros")
-    print("2.Encontar el promedio de n números")
-    print("3.Encontar la cantidad de números positivos y negativos")
-    print("4.Salir")
-
 def suma_total(lista):
     suma_uno=sum(lista)
-    print(f"La suma de los números es:{suma_uno}")
+    print("\n--SUMA--")
+    print(f"La suma de los números es: {suma_uno}")
+
+def promedio(lista):
+    prom=sum(lista)/len(lista)
+    print("\n--PROMEDIO--")
+    print(f"El promedio de los números ingresados es:{prom:.2f}")
+
+def números_positivos(lista):
+    positivos = 0
+    negativos = 0
+    for numero in lista:
+        if numero > 0:
+            positivos += 1
+        elif numero < 0:
+            negativos += 1
+    print("\n--POSITIVOS Y NEGATIVOS--")
+    print("Cantidad de positivos:", positivos)
+    print("Cantidad de negativos:", negativos)
 
 
 def area_triangulo(base,altura):
@@ -55,7 +67,11 @@ while True:
                 for i in range(q):
                     p=int(input("Ingrese los numeros de los que desee: "))
                     lista.append(p)
-            suma_total(lista)
+                suma_total(lista)
+                promedio(lista)
+                números_positivos(lista)
+            else:
+                print("Error intentelo de nuevo")
         case "2":
             base=float(input("Ingrese la base del triangulo:"))
             altura=float(input("Ingrese la altura del triangulo"))
