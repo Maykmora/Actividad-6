@@ -21,8 +21,15 @@ def area_triangulo(base,altura):
     area=base*altura/2
     return area
 
+def num_par_impar(num):
+    if num%2==0:
+        print("El numero ingresado es par.")
+    else:
+        print("El numero ingresado es impar.")
 
 while True:
+    lista=[]
+    lista_dos=[]
     menu()
     option=input("\nSeleccione una opción del menú: ")
 
@@ -47,7 +54,9 @@ while True:
             print(f"El area del triangulo de {base} x {altura} es {area_triangulo(base,altura)}")
 
         case "3":
-            print()
+            num=int(input("\nIngrese el numero que desea saber si es par o impar:"))
+
+            num_par_impar(num)
 
         case "4":
             print()
