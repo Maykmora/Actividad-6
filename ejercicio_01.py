@@ -27,6 +27,12 @@ def num_par_impar(num):
     else:
         print("El numero ingresado es impar.")
 
+def promedio_calificaciones(lista):
+    g=sum(lista)/len(lista)
+    print("\n--PROMEDIO--")
+    print(f"El promedio de las calificaciones ingresadas es:{g:.2f}")
+
+
 while True:
     lista=[]
     lista_dos=[]
@@ -59,7 +65,15 @@ while True:
             num_par_impar(num)
 
         case "4":
-            print()
+            q=int(input("\nIngrese la cantidad de calificaciones que quiere agregar: "))
+            for i in range(q):
+                p=int(input("Ingrese la calificación que desea agregar:"))
+                lista_dos.append(p)
+
+            promedio_calificaciones(lista_dos)
+
+
+
 
         case "5":
             print()
