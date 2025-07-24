@@ -1,6 +1,6 @@
 def menu():
     print("\n--MENÚ--")
-    print("1.Ingresar n números")
+    print("1.Encontrar suma, promedio de n numeros")
     print("2.Calcular el área de un triangulo")
     print("3.Verificar si un numero es par o impar")
     print("4.Calcular el promedio de n calificaciones")
@@ -14,8 +14,9 @@ def menu_dos():
     print("4.Salir")
 
 def suma_total(lista):
-    suma1=sum(lista)
-    return suma1
+    suma_uno=sum(lista)
+    print(f"La suma de los números es:{suma_uno}")
+
 
 def area_triangulo(base,altura):
     area=base*altura/2
@@ -49,19 +50,12 @@ while True:
 
     match option:
         case "1":
-            while True:
-                menu_dos()
-                option2=input("\nSeleccione una opción del menu: ")
-                match option2:
-                    case "1":
-                        print()
-                    case "2":
-                        print()
-                    case "3":
-                        print()
-                    case "4":
-                        print()
-
+            q=int(input("\nIngrese la cantidad de numeros que quiere agregar : "))
+            if q>0:
+                for i in range(q):
+                    p=int(input("Ingrese los numeros de los que desee: "))
+                    lista.append(p)
+            suma_total(lista)
         case "2":
             base=float(input("Ingrese la base del triangulo:"))
             altura=float(input("Ingrese la altura del triangulo"))
