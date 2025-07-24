@@ -7,6 +7,11 @@ def menu():
     print("5.Calcular el numero mayor y el menor de n números ")
     print("6.Salir del programa")
 
+def menu_dos():
+    print("1.Encontrar la suma total de n numeros")
+    print("2.Encontar el promedio de n números")
+    print("3.Encontar la cantidad de números positivos y negativos")
+    print("4.Salir")
 
 while True:
     menu()
@@ -14,7 +19,19 @@ while True:
 
     match option:
         case "1":
-            print("Hola")
+            while True:
+                menu_dos()
+                option2=input("\nSeleccione una opción del menu: ")
+                match option2:
+                    case "1":
+                        print()
+                    case "2":
+                        print()
+                    case "3":
+                        print()
+                    case "4":
+                        print()
+
         case "2":
             print()
 
